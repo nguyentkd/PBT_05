@@ -1,0 +1,47 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: $spacing-md;
+  @include card-shadow;
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    margin: $spacing-md 0 $spacing-sm;
+    font-family: $font-primary;
+    font-weight: 700;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.featured {
+    border: 2px solid $primary-color;
+  }
+}
+
+.btn {
+  @include flex-center;
+  border: 0;
+  border-radius: 9999px;
+  padding: 12px 20px;
+  cursor: pointer;
+
+  &--primary {
+    background: $primary-color;
+    color: white;
+  }
+
+  &--secondary {
+    background: $secondary-color;
+    color: white;
+  }
+}

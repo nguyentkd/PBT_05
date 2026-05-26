@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'mixins';
+@use 'components';
+
+body {
+  font-family: variables.$font-primary;
+  margin: 0;
+  color: #0f172a;
+}
+
+.page {
+  padding: variables.$spacing-md;
+}
